@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FUck these widgets</h1>
+    <table>
+        <thead>
+            <th>Quantity</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            {% for w in widget %}
+            <tr>
+                <td>{{ w.quantity }} </td>
+                <td>{{ w.description}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button>submit</button>
+    </form>
+</body>
+</html>
